@@ -1,159 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VibeMatch — Real-Time Local Synergies & Hangouts</title>
   <!-- Tailwind CSS for sleek styling -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-purple-500 selection:text-white">
 
   <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-6 height-16 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="text-2xl">⚡</span>
-        <span class="font-extrabold text-xl tracking-tight text-white">VibeMatch</span>
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-400 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/20">
+          <span class="text-xl">⚡</span>
+        </div>
+        <span class="font-extrabold text-2xl tracking-tight text-white">VibeMatch</span>
       </div>
-      <nav class="hidden md:flex gap-8 text-sm font-semibold text-slate-400">
-        <a href="#download" class="hover:text-amber-400 transition">Download</a>
-        <a href="#guide" class="hover:text-amber-400 transition">How It Works</a>
-        <a href="#contact" class="hover:text-amber-400 transition">Contact Support</a>
-        <a href="#privacy" onclick="openModal('privacyModal')" class="hover:text-amber-400 transition">Privacy Policy</a>
+      
+      <nav class="hidden md:flex gap-8 text-sm font-semibold text-slate-300">
+        <a href="#features" class="hover:text-amber-400 transition">Features</a>
+        <a href="#how-it-works" class="hover:text-amber-400 transition">How It Works</a>
+        <a href="#safety" class="hover:text-amber-400 transition">Safety & Privacy</a>
+        <a href="#contact" class="hover:text-amber-400 transition">Support</a>
       </nav>
-      <a href="#download" class="bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition">
+
+      <a href="#download" class="bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-950 font-black text-xs px-5 py-3 rounded-xl transition shadow-lg shadow-amber-500/20 tracking-wider">
         GET APK
       </a>
     </div>
   </header>
 
-  <!-- Hero & Direct Download Section -->
-  <section id="download" class="py-20 px-6 max-w-6xl mx-auto text-center">
-    <span class="bg-purple-950 text-purple-400 border border-purple-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-      VibeMatch v1.0 Production
+  <!-- Hero & Download Section -->
+  <section id="download" class="relative pt-24 pb-20 px-6 max-w-6xl mx-auto text-center overflow-hidden">
+    <!-- Glow effects -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-3xl -z-10"></div>
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-amber-500/10 rounded-full blur-3xl -z-10"></div>
+
+    <span class="inline-flex items-center gap-2 bg-purple-950/80 text-purple-300 border border-purple-800/60 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-inner">
+      <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span> VibeMatch Mobile v1.0 Production
     </span>
-    <h1 class="text-4xl md:text-6xl font-black mt-6 tracking-tight leading-tight">
-      Connect Locally. Match Synergies.<br />
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-purple-500">
-        Chat Across Languages.
+
+    <h1 class="text-4xl sm:text-6xl font-black mt-8 tracking-tight leading-[1.15]">
+      Intentional Connections.<br />
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-purple-400">
+        Zero Language Barriers.
       </span>
     </h1>
-    <p class="text-slate-400 max-w-2xl mx-auto mt-4 text-base md:text-lg">
-      Discover nearby profiles based on your favorite local coffee spots, vinyl hubs, and art galleries. Built with real-time Yorùbá, French, and global auto-translation.
+
+    <p class="text-slate-400 max-w-2xl mx-auto mt-6 text-base sm:text-lg leading-relaxed font-normal">
+      Experience local matchmaking re-imagined. Connect based on shared anchor venues, hear authentic voice prompts, and converse seamlessly with real-time multi-language translation.
     </p>
 
-    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
       <!-- REPLACE WITH YOUR ACTUAL EAS BUILD APK URL -->
-      <a href="YOUR_EAS_APK_DOWNLOAD_URL_HERE" download class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm px-8 py-4 rounded-2xl shadow-lg transition flex items-center justify-center gap-2">
-        <span>🤖</span> DOWNLOAD ANDROID APK (DIRECT)
+      <a href="YOUR_EAS_APK_DOWNLOAD_URL_HERE" download class="w-full sm:w-auto bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-sm px-8 py-4.5 rounded-2xl shadow-xl shadow-amber-500/15 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+        <span class="text-xl">🤖</span> DOWNLOAD ANDROID APK (DIRECT)
       </a>
     </div>
-    <p class="text-xs text-slate-500 mt-3">Standalone APK • Android 8.0+ Required • 100% Free & Secure</p>
+
+    <div class="mt-6 flex items-center justify-center gap-6 text-xs text-slate-400">
+      <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Verified Android 8.0+ Build</span>
+      <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Direct TLS/SSL Encrypted</span>
+      <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> No Ads</span>
+    </div>
   </section>
 
-  <!-- User Guide / How It Works -->
-  <section id="guide" class="py-16 bg-slate-900/50 border-y border-slate-800">
+  <!-- Detailed Feature Showcase (IP Safe) -->
+  <section id="features" class="py-20 bg-slate-900/40 border-y border-slate-800/80">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-black text-center mb-12">How To Use VibeMatch</h2>
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-black text-white tracking-tight">Designed for Meaningful Real-World Synergies</h2>
+        <p class="text-slate-400 text-sm mt-3">Smart discovery layers engineered to replace generic, exhausting swiping apps.</p>
+      </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-          <div class="text-3xl mb-4">📍</div>
-          <h3 class="text-lg font-bold mb-2">1. Set Your Anchor Spot</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Feature 1 -->
+        <div class="glass-card p-8 rounded-3xl transition hover:border-purple-500/40">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-6">📍</div>
+          <h3 class="text-lg font-extrabold text-white mb-3">Anchor Location Matching</h3>
           <p class="text-slate-400 text-sm leading-relaxed">
-            Select your favorite cafe, venue, or lounge. VibeMatch matches you with people who frequent the same neighborhood anchor spots.
+            Match with individuals based on lifestyle hubs—from independent coffee spots and vinyl lounges to local art spaces—ensuring organic common ground before you ever exchange messages.
           </p>
         </div>
 
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-          <div class="text-3xl mb-4">🌐</div>
-          <h3 class="text-lg font-bold mb-2">2. Native Auto-Translate</h3>
+        <!-- Feature 2 -->
+        <div class="glass-card p-8 rounded-3xl transition hover:border-purple-500/40">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-2xl mb-6">🌐</div>
+          <h3 class="text-lg font-extrabold text-white mb-3">Live Multi-Language Engine</h3>
           <p class="text-slate-400 text-sm leading-relaxed">
-            Select your preferred reading language (Yorùbá, English, French, Spanish, etc.). All incoming peer messages automatically translate live in chat.
+            Communicate globally without language barriers. In-app messaging features automated real-time translation across dozens of international and regional languages instantly.
           </p>
         </div>
 
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-          <div class="text-3xl mb-4">⚡</div>
-          <h3 class="text-lg font-bold mb-2">3. Daily Likes & Sparks</h3>
+        <!-- Feature 3 -->
+        <div class="glass-card p-8 rounded-3xl transition hover:border-purple-500/40">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-6">🎙️</div>
+          <h3 class="text-lg font-extrabold text-white mb-3">Audio Vibe Snippets</h3>
           <p class="text-slate-400 text-sm leading-relaxed">
-            Enjoy 10 free daily likes and 1 free direct icebreaker message per day. Refill +10 extra swipes anytime using 1.0 Spark Token.
+            Go beyond static pictures. Profiles feature short audio intros so you can experience authentic tone, humor, and personality before establishing a match connection.
           </p>
         </div>
+
+        <!-- Feature 4 -->
+        <div class="glass-card p-8 rounded-3xl transition hover:border-purple-500/40">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-2xl mb-6">⚡</div>
+          <h3 class="text-lg font-extrabold text-white mb-3">Intentional Spark Economy</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Avoid infinite swipe fatigue. Curated daily connection caps encourage high-quality matches, complemented by Spark Tokens for priority icebreaker outreach when someone truly stands out.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="glass-card p-8 rounded-3xl transition hover:border-purple-500/40">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-6">☕</div>
+          <h3 class="text-lg font-extrabold text-white mb-3">Micro-Hangout Invites</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Skip endless text loops. Propose low-pressure, real-world mini hangouts at curated local spots to transition digital sparks into actual conversations naturally.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="glass-card p-8 rounded-3xl transition hover:border-purple-500/40">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-2xl mb-6">🔒</div>
+          <h3 class="text-lg font-extrabold text-white mb-3">Privacy & Safety Guard</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Your exact GPS coordinates are never publicly broadcasted. Nearby matching relies on approximate proximity layers to safeguard user security at all times.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-black text-white">Getting Started in 3 Simple Steps</h2>
+      <p class="text-slate-400 text-sm mt-3">From download to your first meaningful local connection.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 relative">
+      <div class="glass-card p-8 rounded-3xl relative">
+        <span class="text-5xl font-black text-purple-500/20 absolute top-6 right-6">01</span>
+        <h3 class="text-lg font-extrabold text-white mb-3">Install & Select Preferences</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Download the standalone APK directly to your Android device, set up your profile media, and choose your preferred primary reading language.
+        </p>
+      </div>
+
+      <div class="glass-card p-8 rounded-3xl relative">
+        <span class="text-5xl font-black text-purple-500/20 absolute top-6 right-6">02</span>
+        <h3 class="text-lg font-extrabold text-white mb-3">Pick Your Anchor Hubs</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Highlight the local neighborhood venues you frequent. VibeMatch surfaces nearby profiles with overlapping interests and hangout preferences.
+        </p>
+      </div>
+
+      <div class="glass-card p-8 rounded-3xl relative">
+        <span class="text-5xl font-black text-purple-500/20 absolute top-6 right-6">03</span>
+        <h3 class="text-lg font-extrabold text-white mb-3">Connect & Chat Live</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Listen to audio intros, exchange messages with automated translation, and send low-pressure Micro-Hangout suggestions when ready.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Support & Contact Form -->
   <section id="contact" class="py-20 px-6 max-w-3xl mx-auto">
-    <h2 class="text-3xl font-black text-center mb-2">Contact Support</h2>
-    <p class="text-slate-400 text-center text-sm mb-8">Have a question, feedback, or account inquiry? Send us a direct message below.</p>
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-black text-white">Contact & Support</h2>
+      <p class="text-slate-400 text-sm mt-2">Have a question, feedback, or need account assistance? Our team is available 24/7.</p>
+    </div>
 
     <!-- Web3Forms integration for free backend-less emails -->
-    <form action="https://api.web3forms.com/submit" method="POST" class="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-4">
+    <form action="https://api.web3forms.com/submit" method="POST" class="glass-card p-8 sm:p-10 rounded-3xl space-y-5">
       <!-- Replace with your free access key from web3forms.com -->
       <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
       <input type="hidden" name="subject" value="VibeMatch App Support Inquiry" />
 
       <div>
-        <label class="block text-xs font-bold text-slate-400 mb-1">YOUR NAME</label>
-        <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500" placeholder="John Doe" />
+        <label class="block text-xs font-extrabold text-slate-300 uppercase tracking-wider mb-2">Your Full Name</label>
+        <input type="text" name="name" required class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="Alex Morgan" />
       </div>
 
       <div>
-        <label class="block text-xs font-bold text-slate-400 mb-1">EMAIL ADDRESS</label>
-        <input type="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500" placeholder="name@example.com" />
+        <label class="block text-xs font-extrabold text-slate-300 uppercase tracking-wider mb-2">Email Address</label>
+        <input type="email" name="email" required class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="alex@example.com" />
       </div>
 
       <div>
-        <label class="block text-xs font-bold text-slate-400 mb-1">MESSAGE / INQUIRY</label>
-        <textarea name="message" rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-purple-500" placeholder="Describe your issue or feedback..."></textarea>
+        <label class="block text-xs font-extrabold text-slate-300 uppercase tracking-wider mb-2">Message / Feedback</label>
+        <textarea name="message" rows="4" required class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="How can we assist you today?"></textarea>
       </div>
 
-      <button type="submit" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-extrabold py-3.5 rounded-xl transition">
-        SEND MESSAGE
+      <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 text-white font-extrabold text-sm py-4 rounded-xl transition shadow-lg shadow-purple-600/20">
+        SEND SUPPORT INQUIRY
       </button>
     </form>
   </section>
 
   <!-- Footer with Mandatory Legal Links -->
-  <footer class="border-t border-slate-800 py-10 px-6 text-center text-slate-500 text-xs">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+  <footer class="border-t border-slate-800/80 py-12 px-6 text-slate-400 text-xs">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <span class="text-xl">⚡</span>
+        <span class="font-extrabold text-white text-base">VibeMatch</span>
+      </div>
       <p>© 2026 VibeMatch Technologies. All Rights Reserved.</p>
-      <div class="flex gap-6">
-        <button onclick="openModal('privacyModal')" class="hover:text-slate-300">Privacy Policy</button>
-        <button onclick="openModal('termsModal')" class="hover:text-slate-300">Terms of Service</button>
-        <button onclick="openModal('deletionModal')" class="hover:text-slate-300 text-amber-400">Data Deletion Request</button>
+      <div class="flex gap-6 font-medium">
+        <button onclick="openModal('privacyModal')" class="hover:text-amber-400 transition">Privacy Policy</button>
+        <button onclick="openModal('termsModal')" class="hover:text-amber-400 transition">Terms of Service</button>
+        <button onclick="openModal('deletionModal')" class="hover:text-amber-400 text-amber-400 transition">Data Deletion Request</button>
       </div>
     </div>
   </footer>
 
   <!-- PRIVACY POLICY MODAL -->
-  <div id="privacyModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex justify-center items-center p-4">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-2xl max-h-[80vh] overflow-y-auto">
-      <h3 class="text-xl font-bold mb-4">Privacy Policy (GDPR / NDPR / CCPA Compliant)</h3>
-      <div class="text-xs text-slate-400 space-y-3 leading-relaxed">
-        <p><strong>1. Information Collection:</strong> VibeMatch collects user profile details, optional audio recordings, preferred anchor venues, and chat interactions necessary to facilitate local matchmaking.</p>
-        <p><strong>2. Data Storage & Security:</strong> All real-time messages and profile parameters are secured via Google Firebase Cloud Infrastructure using standard SSL/TLS encryption protocols.</p>
-        <p><strong>3. Third-Party Sharing:</strong> We do not sell, rent, or distribute personal identity data to third-party ad networks or brokers.</p>
+  <div id="privacyModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex justify-center items-center p-4">
+    <div class="glass-card rounded-3xl p-8 max-w-2xl max-h-[80vh] overflow-y-auto border border-slate-700">
+      <h3 class="text-xl font-extrabold text-white mb-4">Privacy Policy (Global Governance Compliant)</h3>
+      <div class="text-xs text-slate-300 space-y-3 leading-relaxed">
+        <p><strong>1. Information Collection:</strong> VibeMatch collects profile details, optional audio recordings, preferred anchor venues, and chat interactions necessary to facilitate local matchmaking.</p>
+        <p><strong>2. Data Storage & Encryption:</strong> Real-time messages and parameters are secured via Google Firebase Cloud Infrastructure utilizing standard TLS encryption protocols.</p>
+        <p><strong>3. Third-Party Sharing:</strong> We strictly do not sell, rent, or commercialize personal identity data to third-party ad brokers.</p>
       </div>
-      <button onclick="closeModal('privacyModal')" class="mt-6 bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-xl">Close</button>
+      <button onclick="closeModal('privacyModal')" class="mt-6 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition">Close</button>
+    </div>
+  </div>
+
+  <!-- TERMS OF SERVICE MODAL -->
+  <div id="termsModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex justify-center items-center p-4">
+    <div class="glass-card rounded-3xl p-8 max-w-2xl max-h-[80vh] overflow-y-auto border border-slate-700">
+      <h3 class="text-xl font-extrabold text-white mb-4">Terms of Service</h3>
+      <div class="text-xs text-slate-300 space-y-3 leading-relaxed">
+        <p><strong>1. Age Requirement:</strong> Users must be 18 years of age or older to create an account on VibeMatch.</p>
+        <p><strong>2. Community Guidelines:</strong> Harassment, hate speech, spam, or abusive behavior will result in permanent account termination.</p>
+      </div>
+      <button onclick="closeModal('termsModal')" class="mt-6 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition">Close</button>
     </div>
   </div>
 
   <!-- DATA DELETION REQUEST MODAL (MANDATORY FOR GOOGLE PLAY) -->
-  <div id="deletionModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex justify-center items-center p-4">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-2xl">
-      <h3 class="text-xl font-bold mb-2">Request Account & Data Deletion</h3>
-      <p class="text-xs text-slate-400 mb-4 leading-relaxed">
-        Pursuant to global data governance laws (GDPR & Google Play Developer Policy), users can request complete removal of their account, messages, and uploaded profile media.
+  <div id="deletionModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex justify-center items-center p-4">
+    <div class="glass-card rounded-3xl p-8 max-w-2xl border border-slate-700">
+      <h3 class="text-xl font-extrabold text-white mb-2">Request Account & Data Deletion</h3>
+      <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+        Pursuant to international data protection standards and Google Play Developer Policies, users can request total removal of their account, message logs, and uploaded profile media.
       </p>
-      <p class="text-xs text-slate-300 font-semibold mb-4">
-        To delete your account data instantly, email our data privacy team at: <br />
-        <span class="text-amber-400">privacy@vibematch.app</span> with subject line "ACCOUNT DELETION REQUEST".
+      <p class="text-xs text-slate-200 font-semibold mb-4 bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+        To delete your account data instantly, send a request to our data privacy team at: <br />
+        <span class="text-amber-400 text-sm">privacy@vibematch.app</span> with the subject line <span class="text-white">"ACCOUNT DELETION REQUEST"</span>.
       </p>
-      <button onclick="closeModal('deletionModal')" class="bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-xl">Close</button>
+      <button onclick="closeModal('deletionModal')" class="bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition">Close</button>
     </div>
   </div>
 
