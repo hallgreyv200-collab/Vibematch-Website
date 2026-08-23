@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VibeMatch — Real-Time City Radar & Intentional Connections</title>
-  <meta name="description" content="Connect in real life with VibeMatch. Live video streams, 24/7 global arcade duels, 360° pulse radar, and instant creator royalties." />
+  <title>VibeMatch — Date, Socialize & Earn | Real-Time Social Discovery</title>
+  <meta name="description" content="The world's first platform where you can Date real matches, Socialize in 24/7 live arcade streams, and Earn direct cash royalties." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
@@ -13,34 +13,23 @@
       --card-bg: #0F172A;
       --border: #1E293B;
       --accent-purple: #7C3AED;
-      --accent-purple-glow: rgba(124, 58, 237, 0.25);
       --accent-gold: #F59E0B;
       --accent-green: #10B981;
       --accent-blue: #38BDF8;
-      --text: #FFFFFF;
-      --text-muted: #94A3B8;
     }
 
-    body { background-color: var(--bg-dark); color: var(--text); font-family: system-ui, -apple-system, sans-serif; }
+    body { background-color: var(--bg-dark); color: #FFFFFF; font-family: system-ui, -apple-system, sans-serif; }
     .glow-purple { box-shadow: 0 0 40px rgba(124, 58, 237, 0.35); }
     .glow-gold { box-shadow: 0 0 30px rgba(245, 158, 11, 0.25); }
+    .glow-green { box-shadow: 0 0 30px rgba(16, 185, 129, 0.25); }
     
-    /* Cross-Browser Linter Compliant Gradient Text */
-    .gradient-text { 
-      background: linear-gradient(135deg, #7C3AED, #38BDF8, #F59E0B); 
+    .hero-gradient { 
+      background: linear-gradient(135deg, #FFFFFF 30%, #C084FC 60%, #F59E0B 100%); 
       -webkit-background-clip: text; 
       background-clip: text; 
       -webkit-text-fill-color: transparent; 
     }
 
-    .hero-h1 {
-      background: linear-gradient(135deg, #FFF 40%, var(--accent-purple)); 
-      -webkit-background-clip: text; 
-      background-clip: text; 
-      -webkit-text-fill-color: transparent; 
-    }
-
-    /* FAQ Details styling */
     details summary::-webkit-details-marker { display: none; }
     details summary::after { content: "＋"; font-size: 1.2rem; color: var(--accent-gold); float: right; }
     details[open] summary::after { content: "▔"; }
@@ -55,9 +44,9 @@
       <span class="text-xl font-black tracking-tight text-white">Vibe<span class="text-amber-500">Match</span></span>
     </div>
     <div class="hidden md:flex gap-8 text-sm font-bold text-slate-400">
-      <a href="#features" class="hover:text-white transition">Features</a>
+      <a href="#pillars" class="hover:text-white transition">The 3 Pillars</a>
+      <a href="#earn" class="hover:text-emerald-400 transition text-emerald-400">Earn Cash 💵</a>
       <a href="#merchant" class="hover:text-amber-400 transition text-amber-500">For Venues</a>
-      <a href="#sparks" class="hover:text-white transition">Sparks Economy</a>
       <a href="#faq" class="hover:text-white transition">FAQ</a>
     </div>
     <a href="#contact" class="bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-xs px-5 py-2.5 rounded-full transition glow-purple">
@@ -67,82 +56,140 @@
 
   <!-- HERO SECTION -->
   <header class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-black mb-6">
-      ⚡ DATING IS BROKEN. WE FIXED THE ENERGY.
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-black mb-6">
+      🚀 DATE • SOCIALIZE • EARN — THE EVERYTHING APP
     </div>
-    <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight mb-6 hero-h1">
-      Connect, Play & Meet<br />in Real Life
+    
+    <h1 class="text-5xl sm:text-7xl font-black tracking-tight leading-tight mb-6 hero-gradient">
+      Date Authentically.<br />Socialize Live.<br />Earn Real Cash.
     </h1>
+    
     <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
-      The real-time social radar engineered to turn digital matches into real-world moments. Skip small talk with icebreaker duels, host live city meetups, and connect safely.
+      Why settle for boring swipe apps? VibeMatch merges real-life dating, 24/7 interactive video streams, and creator monetization into one explosive ecosystem.
     </p>
 
-    <!-- DOWNLOAD BUTTONS -->
+    <!-- DOWNLOAD & EARN BUTTONS -->
     <div class="flex flex-wrap justify-center gap-4 mb-12">
       <a href="#contact" class="bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-sm px-8 py-4 rounded-full transition glow-purple flex items-center gap-2">
         <span>📲 Download VibeMatch APK</span>
       </a>
-      <a href="#sparks" class="bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/40 font-extrabold text-sm px-8 py-4 rounded-full transition">
-        <span>⚡ Spark Economy</span>
+      <a href="#earn" class="bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 font-extrabold text-sm px-8 py-4 rounded-full transition glow-green flex items-center gap-2">
+        <span>💵 Host & Earn Royalties</span>
       </a>
     </div>
   </header>
 
-  <!-- COMPARISON BANNER -->
-  <section class="max-w-4xl mx-auto px-6 mb-16 w-full">
-    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-      <div class="border-b md:border-b-0 md:border-r border-slate-800 pb-4 md:pb-0">
-        <p class="text-red-500 text-xs line-through font-bold mb-1">❌ Endless Swiping</p>
-        <p class="text-emerald-400 text-sm font-black">✨ Live 360° Radar</p>
+  <!-- THE 3 CORE PILLARS (OUR EDGE) -->
+  <section id="pillars" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-black text-white">Why VibeMatch Beats Every Other App</h2>
+      <p class="text-slate-400 text-xs sm:text-sm mt-2">The ultimate combination of dating, gaming, and creator economy.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- PILLAR 1: DATE -->
+      <div class="bg-slate-900 border border-purple-500/40 p-8 rounded-3xl glow-purple relative overflow-hidden">
+        <div class="text-4xl mb-4">❤️</div>
+        <div class="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">Pillar 1</div>
+        <h3 class="text-2xl font-black text-white mb-3">DATE INTENTIONALLY</h3>
+        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+          Skip endless text small talk. Find local matches on our 360° Pulse Radar, unmask daily perfect matches, and confirm date night spots with RSVP Vault protection.
+        </p>
+        <ul class="text-xs text-slate-300 font-bold space-y-2">
+          <li>✔ 3D Liveness Verified Profiles</li>
+          <li>✔ Smart RSVP Venue Check-Ins</li>
+          <li>✔ 1-Time Disappearing Chat Media</li>
+        </ul>
       </div>
-      <div class="border-b md:border-b-0 md:border-r border-slate-800 pb-4 md:pb-0">
-        <p class="text-red-500 text-xs line-through font-bold mb-1">❌ Ghosting & Flaking</p>
-        <p class="text-emerald-400 text-sm font-black">✨ Verified RSVP Perks</p>
+
+      <!-- PILLAR 2: SOCIALIZE -->
+      <div class="bg-slate-900 border border-amber-500/40 p-8 rounded-3xl glow-gold relative overflow-hidden">
+        <div class="text-4xl mb-4">🎮</div>
+        <div class="text-xs font-black text-amber-400 uppercase tracking-wider mb-1">Pillar 2</div>
+        <h3 class="text-2xl font-black text-white mb-3">SOCIALIZE LIVE</h3>
+        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+          Hang out in 24/7 automated game arenas or jump into live video streams with dynamic AR face tags, helium voice modulators, and interactive canvas doodles.
+        </p>
+        <ul class="text-xs text-slate-300 font-bold space-y-2">
+          <li>✔ 12 Global Standalone Arcade Games</li>
+          <li>✔ Live Stream AR Overlays & Doodles</li>
+          <li>✔ 24-Hour Community Vibe Moments</li>
+        </ul>
       </div>
-      <div>
-        <p class="text-red-500 text-xs line-through font-bold mb-1">❌ Unwanted Spam</p>
-        <p class="text-emerald-400 text-sm font-black">✨ Smart Contact Shield</p>
+
+      <!-- PILLAR 3: EARN -->
+      <div class="bg-slate-900 border border-emerald-500/40 p-8 rounded-3xl glow-green relative overflow-hidden">
+        <div class="text-4xl mb-4">💵</div>
+        <div class="text-xs font-black text-emerald-400 uppercase tracking-wider mb-1">Pillar 3</div>
+        <h3 class="text-2xl font-black text-white mb-3">EARN CASH ROYALTIES</h3>
+        <p class="text-slate-400 text-xs leading-relaxed mb-6">
+          Turn your popularity into serious income. Streamers and event hosts earn direct cash grants from live gifts, doodles, and referral invites.
+        </p>
+        <ul class="text-xs text-slate-300 font-bold space-y-2">
+          <li>✔ $0.50 USD / Coin Streamer Cut</li>
+          <li>✔ Bi-Weekly Cash Settlement (1st & 15th)</li>
+          <li>✔ Instant Referral Sparks Payouts</li>
+        </ul>
       </div>
+
     </div>
   </section>
 
-  <!-- FEATURES GRID -->
-  <section id="features" class="max-w-6xl mx-auto px-6 py-12">
-    <div class="text-center mb-12">
-      <h2 class="text-2xl sm:text-3xl font-black text-white">Engineered for Real Connections</h2>
-      <p class="text-slate-400 text-xs sm:text-sm mt-2">Discover how VibeMatch shifts social networking from static screens to real life.</p>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-purple-500 transition">
-        <div class="text-3xl mb-4">🗺️</div>
-        <h3 class="text-base font-black text-white mb-2">City Pulse Radar</h3>
-        <p class="text-slate-400 text-xs leading-relaxed">Explore an interactive 360° view of local singles, squad hangouts, visiting travelers, and live spontaneous meetups nearby.</p>
+  <!-- DEEP-DIVE MONETIZATION SECTION -->
+  <section id="earn" class="bg-slate-950 border-y border-slate-800 py-16 px-6">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="max-w-lg">
+        <div class="inline-block bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-black px-3 py-1 rounded-lg mb-4">
+          💰 High-Yield Creator Economy
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mb-4">How Streamers & Hosts Make Money</h2>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          VibeMatch features a built-in Creator Royalty Grant Engine. When viewers send virtual gifts, trigger AR overlays, or enter stream games, 50% of token value goes straight to the host wallet.
+        </p>
+        <div class="space-y-3 text-xs font-bold text-slate-300">
+          <div class="flex items-center gap-3">
+            <span class="text-emerald-400 text-base">✓</span>
+            <span>$50.00 USD Minimum Cashout Gate</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-emerald-400 text-base">✓</span>
+            <span>Automated 14-Day Anti-Fraud Escrow Protection</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-emerald-400 text-base">✓</span>
+            <span>Supported in US, UK, Europe, Nigeria & Globally</span>
+          </div>
+        </div>
       </div>
 
-      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-purple-500 transition">
-        <div class="text-3xl mb-4">🤝</div>
-        <h3 class="text-base font-black text-white mb-2">Guaranteed Hangouts</h3>
-        <p class="text-slate-400 text-xs leading-relaxed">Our Smart RSVP Protocol locks in date night plans at partner cafes and lounges. Check in to unlock VIP discounts and food perks.</p>
-      </div>
-
-      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-purple-500 transition">
-        <div class="text-3xl mb-4">🔒</div>
-        <h3 class="text-base font-black text-white mb-2">Next-Gen Privacy Suite</h3>
-        <p class="text-slate-400 text-xs leading-relaxed">Your phone number and socials stay masked until mutual trust is built. Disappearing media comes guarded by Vault Privacy watermarking.</p>
-      </div>
-
-      <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-purple-500 transition">
-        <div class="text-3xl mb-4">🎙️</div>
-        <h3 class="text-base font-black text-white mb-2">Pre-Date Arcade</h3>
-        <p class="text-slate-400 text-xs leading-relaxed">Break the ice effortlessly with 60-second voice intros, audio duels, 2 Truths & 1 Lie, and rapid 3-minute video dates.</p>
+      <div class="bg-slate-900 border border-emerald-500/40 p-6 rounded-2xl w-full max-w-sm glow-green">
+        <h4 class="text-emerald-400 font-black text-sm mb-4">📊 Host Royalty Earnings Breakdown</h4>
+        <div class="space-y-3 text-xs">
+          <div class="flex justify-between border-b border-slate-800 pb-2">
+            <span class="text-slate-400">100 Vibe Coins Received</span>
+            <span class="font-bold text-white">$50.00 USD Royalty</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-800 pb-2">
+            <span class="text-slate-400">500 Vibe Coins Received</span>
+            <span class="font-bold text-white">$250.00 USD Royalty</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-800 pb-2">
+            <span class="text-slate-400">1,000 Vibe Coins Received</span>
+            <span class="font-bold text-white">$500.00 USD Royalty</span>
+          </div>
+          <div class="flex justify-between text-emerald-400 font-black pt-2">
+            <span>Platform Payout Model</span>
+            <span>App Store Compliant 💵</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- B2B MERCHANT SECTION -->
   <section id="merchant" class="max-w-5xl mx-auto px-6 py-12">
-    <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-purple-950/40 border border-amber-500/40 p-8 sm:p-12 rounded-3xl text-center glow-gold">
+    <div class="bg-gradient-to-r from-slate-900 via-slate-900 to-amber-950/30 border border-amber-500/40 p-8 sm:p-12 rounded-3xl text-center glow-gold">
       <h2 class="text-2xl sm:text-3xl font-black text-white mb-3">🏪 Become a Verified Vibe Spot</h2>
       <p class="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mb-6">
         Own a local coffee shop, cocktail lounge, or venue? Join our Merchant Partner Network to feature your establishment on our live city map and drive guaranteed date-night foot traffic.
@@ -150,46 +197,6 @@
       <a href="#contact" class="inline-block bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 border border-amber-500 font-extrabold text-xs px-6 py-3 rounded-full transition">
         Apply for Venue Verification
       </a>
-    </div>
-  </section>
-
-  <!-- PRICING & SPARKS ECONOMY -->
-  <section id="sparks" class="max-w-5xl mx-auto px-6 py-12">
-    <div class="text-center mb-10">
-      <h2 class="text-2xl sm:text-3xl font-black text-white">Unified Spark Economy ⚡</h2>
-      <p class="text-slate-400 text-xs sm:text-sm mt-2">Power your experience with utility tokens for direct notes, flash pins, and event slots.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between">
-        <div>
-          <h3 class="font-bold text-slate-300 text-sm">Starter Pack</h3>
-          <div class="text-3xl font-black text-amber-400 my-2">$0.99</div>
-          <div class="text-sm font-extrabold text-white mb-2">15 Spark Tokens ⚡</div>
-          <p class="text-slate-400 text-xs leading-relaxed">Perfect for icebreaker notes and instant profile boosts.</p>
-        </div>
-      </div>
-
-      <div class="bg-slate-900 border-2 border-amber-500 p-6 rounded-2xl flex flex-col justify-between relative glow-gold">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-black text-[10px] font-black px-3 py-0.5 rounded-full uppercase">
-          Most Popular
-        </div>
-        <div>
-          <h3 class="font-bold text-slate-300 text-sm">Popular Chest</h3>
-          <div class="text-3xl font-black text-amber-400 my-2">$4.99</div>
-          <div class="text-sm font-extrabold text-white mb-2">100 Spark Tokens ⚡</div>
-          <p class="text-slate-400 text-xs leading-relaxed">Great value for active daters (~$0.05 / Spark) + 24-Hr Radar Drops.</p>
-        </div>
-      </div>
-
-      <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col justify-between">
-        <div>
-          <h3 class="font-bold text-slate-300 text-sm">VIP Power Bundle</h3>
-          <div class="text-3xl font-black text-amber-400 my-2">$9.99</div>
-          <div class="text-sm font-extrabold text-white mb-2">250 Spark Tokens ⚡</div>
-          <p class="text-slate-400 text-xs leading-relaxed">Maximum token value (~$0.04 / Spark) for event hosts & power users.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -202,18 +209,18 @@
     <div class="space-y-4">
       <div class="bg-slate-900 border border-slate-800 rounded-xl p-4">
         <details>
-          <summary class="font-bold text-sm cursor-pointer text-white">How does VibeMatch prevent ghosting?</summary>
+          <summary class="font-bold text-sm cursor-pointer text-white">How do creators earn money on VibeMatch?</summary>
           <p class="text-slate-400 text-xs mt-3 leading-relaxed">
-            Our Smart RSVP Protocol encourages daters to confirm plans at partner locations. Checking in on date night awards both users bonus app rewards and venue discounts!
+            Creators receive Creator Royalty Grants whenever viewers send gifts or buy doodles during live video broadcasts. Cashouts settle directly on the 1st and 15th of every month.
           </p>
         </details>
       </div>
 
       <div class="bg-slate-900 border border-slate-800 rounded-xl p-4">
         <details>
-          <summary class="font-bold text-sm cursor-pointer text-white">How are my personal contact details protected?</summary>
+          <summary class="font-bold text-sm cursor-pointer text-white">How does VibeMatch prevent catfishing?</summary>
           <p class="text-slate-400 text-xs mt-3 leading-relaxed">
-            Your social media handles and phone numbers stay automatically masked behind our Smart Contact Shield until you reach verified trust milestones with your match.
+            Every user goes through our 3D Liveness Gesture Check (blinking, smiling, and gesture detection). Profiles must maintain a 85%+ facial vector match score to stay verified.
           </p>
         </details>
       </div>
@@ -222,7 +229,7 @@
         <details>
           <summary class="font-bold text-sm cursor-pointer text-white">What are Spark Tokens ⚡ used for?</summary>
           <p class="text-slate-400 text-xs mt-3 leading-relaxed">
-            Sparks unlock premium social features such as posting 2-Hr Flash Pins on the city radar, sending priority direct notes, and hosting 24-Hr city events.
+            Sparks are utility tokens used to swipe profiles, post 360° Radar map pins, purchase custom wallpapers, and unmask disappearing media in private chats.
           </p>
         </details>
       </div>
